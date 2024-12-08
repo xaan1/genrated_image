@@ -1,9 +1,12 @@
 
 import React from 'react';
 import { assets } from '../assets/assets';
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
 
+
+  const navigate = useNavigate()
     
   return (
     <div className='flex items-center  flex-col px-4 mt-20 '>
@@ -18,7 +21,7 @@ const Header = () => {
         Unleash your creativity with AI. Turn  <br/> your imagination into visual art in seconds – just type, and watch the magic happen.
         </p>
 
-        <button className='px-4 py-2 bg-blue-500 text-white rounded-lg'>
+        <button  onClick={()=> navigate("/result")} className='px-4 py-2 bg-blue-500 text-white rounded-lg'>
            Generated Image
         </button>
 

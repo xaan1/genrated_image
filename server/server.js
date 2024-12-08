@@ -3,6 +3,7 @@ import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import router from './router/userRouter.js';
+import imgRouter from './router/imgRouter.js';
 
 
 const app = express();
@@ -37,6 +38,8 @@ mongoose.connect("mongodb+srv://aasiyomaxmedapdi:f4tbzgf1rCTPsYzc@cluster0.ewjni
 
 
     app.use('/api/users', router);
+
+    app.use('/api/image', imgRouter);
 
 
 
